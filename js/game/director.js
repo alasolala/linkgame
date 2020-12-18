@@ -65,7 +65,7 @@ export default class Director {
             let ix = parseInt((x - MARGIN) / SIZE), 
                 iy = parseInt((y - MARGIN) / SIZE);
             let num = this.matrix[iy][ix];
-            
+            if(points[`${iy}${ix}`].value === undefined) return
             if(first){  
                 let second = points[`${iy}${ix}`]
                 if(num == first.value && isLink(first,second)){

@@ -2,7 +2,7 @@ import Sprite from "../base/sprite.js"
 import { objects, OBJ_HEIGHT, OBJ_WIDTH } from "./object.js"
 import { SIZE, MARGIN } from "../base/constant.js"
 
-export default class Point extends Sprite{//把两个类合并，把所有点存起来obj=Object.create(null)，随时可以访问
+export default class Point extends Sprite{
     constructor(ctx,image,i,j,value){
         super(ctx, image, 0, 0, OBJ_HEIGHT, OBJ_WIDTH, 0, 0, SIZE, SIZE);
         this.i = i;
@@ -19,7 +19,7 @@ export default class Point extends Sprite{//把两个类合并，把所有点存
     }
 
     clear(){
-        this.ctx.clearRect(this.x-1, this.y-1, SIZE+2, SIZE+2) //清楚物体外的红框
+        this.ctx.clearRect(this.x-1, this.y-1, SIZE+2, SIZE+2) //清除物体外的红框
     }
 }
 
